@@ -137,8 +137,9 @@ a {
 }
 
 .hero-logo {
-  width: min(580px, 90vw);
-  margin-bottom: 25px;
+  width: min(394px, 61vw);
+  height: auto;
+  margin-bottom: 37px;
   filter: drop-shadow(0 0 30px rgba(158, 46, 243, 0.23));
 }
 
@@ -634,8 +635,8 @@ footer small {
   }
 
   .hero-logo {
-    width: 100%;
-    max-width: 94vw;
+    width: 68%;
+    max-width: 64vw;
   }
 
   .hero-copy {
