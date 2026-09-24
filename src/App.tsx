@@ -10,28 +10,37 @@ import Trade from "./components/Trade";
 import BuybackPolicy from "./components/BuybackPolicy";
 import Visit from "./components/Visit";
 import Footer from "./components/Footer";
+import { useSiteRouting } from "./routing";
 
 function App() {
+  const { path, onNavigate } = useSiteRouting();
+
   return (
-    <div className="site">
-      <Navbar />
+    <div className="site" onClick={onNavigate}>
+      <Navbar key={path} homePath={path === "/" ? "" : "/"} />
 
-      <main>
-        <Hero />
+      <main tabIndex={-1}>
+        {path === "/buyback" ? (
+          <BuybackPolicy />
+        ) : path === "/events" ? (
+          <Events fullPage />
+        ) : (
+          <>
+            <Hero />
 
-        <GrandOpening />
+            <GrandOpening />
 
-        <Events />
+            <Events />
 
-        <Shop />
+            <Shop />
 
-        {SHOW_INVENTORY && <Inventory />}
+            {SHOW_INVENTORY && <Inventory />}
 
-        <Trade />
+            <Trade />
 
-        <BuybackPolicy />
-
-        <Visit />
+            <Visit />
+          </>
+        )}
       </main>
 
       <Footer />

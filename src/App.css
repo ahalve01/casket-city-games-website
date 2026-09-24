@@ -648,10 +648,30 @@ footer small {
 }
 
 /* Buyback policy */
-.buyback-policy h2 {
+.page-home-link {
+  margin-bottom: 24px;
+}
+
+.events-all-link {
+  margin-top: 32px;
+}
+
+.events-page h1 {
   margin: 16px 0;
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 500;
+  line-height: normal;
+}
+
+.buyback-home-link {
+  margin-bottom: 24px;
+}
+
+.buyback-policy h1 {
+  margin: 16px 0;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 500;
+  line-height: normal;
 }
 
 .buyback-block + .buyback-block {

@@ -8,9 +8,10 @@ const cardRates = [
 export default function BuybackPolicy() {
   return (
     <section className="section buyback-policy" id="buyback-policy" aria-labelledby="buyback-heading">
+      <a className="button secondary buyback-home-link" href="/">← Back to Homepage</a>
       <div className="section-heading">
         <p className="eyebrow">MAKE ROOM FOR YOUR NEXT FAVORITE</p>
-        <h2 id="buyback-heading">Buyback Policy</h2>
+        <h1 id="buyback-heading">Buyback Policy</h1>
         <p>Give your cards and games a new home. Choose cash or store credit with the offers below.</p>
       </div>
 

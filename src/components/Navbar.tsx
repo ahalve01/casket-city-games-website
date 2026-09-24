@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import logo from "../assets/casket-city-logo.png";
 
-export default function Navbar() {
+export default function Navbar({ homePath = "" }: { homePath?: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
@@ -27,7 +27,7 @@ export default function Navbar() {
         if (!event.currentTarget.contains(event.relatedTarget)) setIsOpen(false);
       }}
     >
-      <a href="#" className="brand" onClick={() => setIsOpen(false)}>
+      <a href={homePath || "#"} className="brand" onClick={() => setIsOpen(false)}>
         <img src={logo} alt="Casket City Games" />
       </a>
 
@@ -51,10 +51,10 @@ export default function Navbar() {
         className={isOpen ? "is-open" : undefined}
         onClick={() => setIsOpen(false)}
       >
-        <a href="#events">Events</a>
-        <a href="#shop">Shop</a>
-        <a href="#trade">Sell &amp; Trade</a>
-        <a href="#visit">Visit</a>
+        <a href="/events">Events</a>
+        <a href={`${homePath}#shop`}>Shop</a>
+        <a href="/buyback">Sell &amp; Trade</a>
+        <a href={`${homePath}#visit`}>Visit</a>
       </nav>
     </header>
   );

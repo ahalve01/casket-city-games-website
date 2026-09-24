@@ -1,57 +1,21 @@
-export default function Events() {
+import { storeEvents } from "../data/events";
+import EventCard from "./EventCard";
+
+export default function Events({ fullPage = false }: { fullPage?: boolean }) {
+  const events = fullPage ? storeEvents : storeEvents.filter((event) => event.highlighted).slice(0, 3);
+  const Heading = fullPage ? "h1" : "h2";
   return (
-    <section className="section" id="events">
+    <section className={fullPage ? "section events-page" : "section"} id="events" aria-labelledby="events-heading">
+      {fullPage && <a className="button secondary page-home-link" href="/">← Back to Homepage</a>}
       <div className="section-heading">
         <p className="eyebrow">GATHER AT CASKET CITY</p>
-        <h2>Upcoming Events</h2>
-        <p>
-          Drafts, Commander, Pokémon, D&amp;D and more.
-        </p>
+        <Heading id="events-heading">Upcoming Events</Heading>
+        <p>Drafts, Commander, Pokémon, D&amp;D and more.</p>
       </div>
-
       <div className="card-grid">
-        <article className="feature-card">
-          <span className="card-date">FRI • SEP 25</span>
-          <h3>Grand Opening Magic Draft</h3>
-          <p>
-            Doors open at 4 PM. Join us for Magic and help us
-            celebrate opening weekend.
-          </p>
-          <a
-            href="https://casket-city-events.adamhalverson.workers.dev/?event=magic-draft-grand-opening-2026-09-25"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Reserve Your Seat →
-          </a>
-        </article>
-
-        <article className="feature-card">
-          <span className="card-date">WEEKLY</span>
-          <h3>Commander Nights</h3>
-          <p>
-            Bring a deck, grab a table, and meet other Commander
-            players from the community.
-          </p>
-          <a href="#">View Events →</a>
-        </article>
-
-        <article className="feature-card">
-          <span className="card-date">AT CASKET CITY</span>
-          <h3>D&amp;D and Open Play</h3>
-          <p>
-            Adventures, one-shots, Pokémon open play and other
-            community game nights.
-          </p>
-          <a
-            href="https://casket-city-events.adamhalverson.workers.dev/?event=dnd-phandelver-2026-09-27"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Sign Up for D&amp;D →
-          </a>
-        </article>
+        {events.map((event) => <EventCard key={event.id} event={event} />)}
       </div>
+      {!fullPage && <a className="button secondary events-all-link" href="/events">View All Events</a>}
     </section>
   );
 }

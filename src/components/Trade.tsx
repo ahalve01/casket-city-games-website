@@ -8,7 +8,7 @@ export default function Trade() {
         We buy singles and bulk and offer cash or store credit.
       </p>
 
-      <a className="button secondary" href="#buyback-policy">
+      <a className="button secondary" href="/buyback">
         View Our Buy Policy
       </a>
     </section>
