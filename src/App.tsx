@@ -7,6 +7,7 @@ import Events from "./components/Events";
 import Shop from "./components/Shop";
 import Inventory from "./components/Inventory";
 import Trade from "./components/Trade";
+import BuybackPolicy from "./components/BuybackPolicy";
 import Visit from "./components/Visit";
 import Footer from "./components/Footer";
 
@@ -27,6 +28,8 @@ function App() {
         {SHOW_INVENTORY && <Inventory />}
 
         <Trade />
+
+        <BuybackPolicy />
 
         <Visit />
       </main>
