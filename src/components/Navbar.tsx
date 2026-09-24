@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import logo from "../assets/casket-city-logo.png";
 
-export default function SiteHeader() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
