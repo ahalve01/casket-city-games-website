@@ -571,6 +571,24 @@ footer small {
 }
 
 @media (max-width: 800px) {
+  .grand-opening-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding: 40px 24px;
+  }
+
+  .grand-opening-mark {
+    min-height: 200px;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+
+  .visit-section > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
   .hero {
     min-height: 650px;
   }
@@ -591,8 +609,33 @@ footer small {
 
 @media (max-width: 560px) {
 
+  .opening-details {
+    grid-template-columns: 1fr;
+  }
+
+  .grand-opening-badge {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .grand-opening-actions .button {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .hours {
+    padding: 24px;
+  }
+
+  .hours p {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   .hero-logo {
-    width: 94vw;
+    width: 100%;
+    max-width: 94vw;
   }
 
   .hero-copy {

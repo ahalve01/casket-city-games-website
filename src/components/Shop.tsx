@@ -1,3 +1,5 @@
+import { SHOW_INVENTORY } from "../config";
+
 export default function Shop() {
   return (
     <section className="shop-section" id="shop">
@@ -21,10 +23,17 @@ export default function Shop() {
           <strong>Shop TCGplayer Pro →</strong>
         </a>
 
-        <a className="shop-card" href="#inventory">
-          <span>In-Store Inventory</span>
-          <strong>Browse Inventory →</strong>
-        </a>
+        {SHOW_INVENTORY ? (
+          <a className="shop-card" href="#inventory">
+            <span>In-Store Inventory</span>
+            <strong>Browse Inventory →</strong>
+          </a>
+        ) : (
+          <div className="shop-card">
+            <span>In-Store Inventory</span>
+            <strong>Coming Soon</strong>
+          </div>
+        )}
       </div>
     </section>
   );

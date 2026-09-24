@@ -1,4 +1,5 @@
 import "./App.css";
+import { SHOW_INVENTORY } from "./config";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import GrandOpening from "./components/GrandOpening";
@@ -23,7 +24,7 @@ function App() {
 
         <Shop />
 
-        <Inventory />
+        {SHOW_INVENTORY && <Inventory />}
 
         <Trade />
 
