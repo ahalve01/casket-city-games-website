@@ -43,7 +43,13 @@ export default function Events() {
             Adventures, one-shots, Pokémon open play and other
             community game nights.
           </p>
-          <a href="#">See What's Coming →</a>
+          <a
+            href="https://casket-city-events.adamhalverson.workers.dev/?event=dnd-phandelver-2026-09-27"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sign Up for D&amp;D →
+          </a>
         </article>
       </div>
     </section>

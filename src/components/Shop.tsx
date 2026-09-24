@@ -21,9 +21,9 @@ export default function Shop() {
           <strong>Shop TCGplayer Pro →</strong>
         </a>
 
-        <a className="shop-card" href="#">
+        <a className="shop-card" href="#inventory">
           <span>In-Store Inventory</span>
-          <strong>Coming Soon →</strong>
+          <strong>Browse Inventory →</strong>
         </a>
       </div>
     </section>
